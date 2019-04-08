@@ -5,6 +5,7 @@ import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import Counter from "./components/Counter";
 import counter from "./reducers";
+import "./index.css";
 
 const middleware = [thunk];
 
@@ -28,7 +29,9 @@ const store = createStore(
 // where the store "lives".
 ReactDOM.render(
   <Provider store={store}>
-    <Counter />
+    <div className="container">
+      <Counter />
+    </div>
   </Provider>,
   document.getElementById("root")
 );

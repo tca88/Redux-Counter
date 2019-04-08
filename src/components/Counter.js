@@ -7,6 +7,7 @@ import {
   incrementAsync
 } from "../actions";
 import { INCREMENT } from "../actions/index";
+import "./Counter.css";
 
 class Counter extends Component {
   incrementIfOdd = () => {
@@ -34,14 +35,14 @@ class Counter extends Component {
         Clicked: {this.props.count} times
         <button
           onClick={() => {
-            this.props.increment(this.props.count + 1);
+            this.props.increment(this.props.count);
           }}
         >
           +
         </button>
         <button
           onClick={() => {
-            this.props.decrement(this.props.count - 1);
+            this.props.decrement(this.props.count);
           }}
         >
           -
