@@ -13,16 +13,17 @@ class Counter extends Component {
   incrementIfOdd = () => {
     // Stretch Problem: Implement an increment function that
     // only increments if the counter value is odd
-    if (this.props.count % 2 !== 0) {
-      return this.props.incrementIfOdd(this.props.count + 1);
-    }
+    // if (this.props.count % 2 !== 0) {
+    //   return this.props.incrementIfOdd(this.props.count + 1);
+    // }
+    return this.props.incrementIfOdd(this.props.count);
   };
 
   incrementAsync = () => {
     // Stretch Problem: Implement an increment function that
     // increments after waiting for one second
     return setTimeout(() => {
-      this.props.incrementAsync(this.props.count + 1);
+      this.props.incrementAsync(this.props.count);
     }, 1000);
   };
 

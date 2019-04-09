@@ -33,14 +33,14 @@ export default (state = initialState, action) => {
       // Fill in the body of this case
       return {
         ...state,
-        count: action.payload
+        count: action.payload % 2 !== 0 ? action.payload + 1 : action.payload
       };
 
     case INCREMENT_ASYNC:
       // Fill in the body of this case
       return {
         ...state,
-        count: action.payload
+        count: action.payload + 1
       };
     default:
       return state;
